@@ -1,0 +1,11 @@
+@media(max-width: 768px){
+    .add-card {
+        justify-content: center;
+    }
+    .btn-mobile{
+        margin-top: 15px;
+        position: relative;
+        top: 0px;
+        left: -7px;
+    }
+}

@@ -1,0 +1,49 @@
+@media(max-width: 768px){
+    .main-card {
+        margin: 10px 40px !important;
+    }
+}
+.main-card{
+    border: 1px solid black;
+    text-align: center;
+    width: 300px;
+    float: left;
+    margin-left: 23px;
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+         box-shadow: 0 8px 6px -6px black;
+    border-radius: 5%;
+    margin-top: 10px;
+    background: #E1F5FE;
+}
+.heading{
+    font-size: 25px;
+    font-family: monospace;
+}
+.completed{
+    color: red;
+}
+.remove-card{
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.task-item{
+    border: 0.5px solid black;
+    width: 253px;
+    font-family: monospace;
+    margin-left: 24px;
+    padding: 10px 2px;
+    -webkit-box-shadow: 0 8px 6px -6px black;
+	   -moz-box-shadow: 0 8px 6px -6px black;
+	        box-shadow: 0 8px 6px -6px black;
+    font-size: 18px;
+    border-radius: -27%;
+    border-radius: 18px;
+    white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+    padding: 10px;
+    background: white;
+    margin-bottom: 5px;
+}
