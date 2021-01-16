@@ -8,7 +8,9 @@ function mapDispatchToProps(dispatch) {
     return {
         addCard: card => dispatch(actions.addCard(card)),
         addTask : task => dispatch(actions.addTask(task)),
-        removeCard : index=> dispatch(actions.removeCard(index))
+        removeCard : index=> dispatch(actions.removeCard(index)),
+        removeTask : rmTask => dispatch(actions.removeTask(rmTask)),
+        changeName : name => dispatch(actions.changeName(name))
     };
 }
 
@@ -38,6 +40,23 @@ function Home(props){
 
     function getUID(){
         return Math.floor(1000 + Math.random() * 9000);
+    }
+
+    function removeTaskByIndex(cardIndex,taskIndex){
+        let obj = {
+            cardIndex : cardIndex,
+            taskIndex : taskIndex
+        }
+        props.removeTask(obj);
+    }
+
+    function changeTaskName(cardIndex,taskIndex,value){
+        let obj = {
+            cardIndex : cardIndex,
+            taskIndex : taskIndex,
+            newName: value
+        }
+        props.changeName(obj);
     }
 
     function addTaskToCard(e,index){
@@ -87,7 +106,7 @@ function Home(props){
                 <div className="cards-div">
                     {props.cardData.map((card,index)=>
                         <div className="mb-2">
-                            <ToDoCard removeCard={removeCardByIndex} changeItemState={changeItemState} addTaskToCard={addTaskToCard} cardIndex={index} card={card}/>
+                            <ToDoCard changeTask={changeTaskName} removeTask={removeTaskByIndex} removeCard={removeCardByIndex} changeItemState={changeItemState} addTaskToCard={addTaskToCard} cardIndex={index} card={card}/>
                         </div>
                     )}
                 </div>

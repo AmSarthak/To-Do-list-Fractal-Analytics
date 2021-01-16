@@ -20,6 +20,9 @@
     font-size: 25px;
     font-family: monospace;
 }
+.edit-btn{
+    margin-top: 2px;
+}
 .completed{
     color: red;
 }
